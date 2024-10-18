@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme -->
-    <style name="Theme.PetCareApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.NIT3213FinalProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary Colors -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
