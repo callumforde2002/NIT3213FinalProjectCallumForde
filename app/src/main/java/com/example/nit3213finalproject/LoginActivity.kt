@@ -16,7 +16,7 @@ import javax.inject.Inject
 class LoginActivity : ComponentActivity() {
 
     @Inject
-    lateinit var apiService: ApiService // Hilt injects ApiService
+    lateinit var apiService: ApiService // Inject ApiService with Hilt
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +44,7 @@ class LoginActivity : ComponentActivity() {
         apiService.login(request).enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful) {
-                    // Navigate to DashboardActivity (replace with your DashboardActivity)
+                    // Navigate to DashboardActivity upon successful login
                     val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
                     intent.putExtra("keypass", response.body()?.keypass)
                     startActivity(intent)
