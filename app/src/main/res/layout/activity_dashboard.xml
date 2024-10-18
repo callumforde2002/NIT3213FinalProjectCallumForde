@@ -6,14 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".DashboardActivity">
 
-    <TextView
-        android:id="@+id/tvKeypass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Keypass"
-        android:textSize="24sp"
+    <!-- RecyclerView to display the list of entities -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEntities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
