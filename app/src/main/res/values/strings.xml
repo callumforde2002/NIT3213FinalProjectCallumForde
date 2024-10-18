@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">NIT3213FinalProject</string>
+    <!-- App Name -->
+    <string name="app_name">Pet Care App</string>
+
+    <!-- Login Screen -->
+    <string name="login_button">Login</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_error">Login failed. Please check your credentials.</string>
+    <string name="login_success">Login successful!</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Your Dashboard</string>
+    <string name="entity_list_title">Entities</string>
+
+    <!-- Details Screen -->
+    <string name="details_title">Entity Details</string>
+    <string name="property1_label">Property 1</string>
+    <string name="property2_label">Property 2</string>
+    <string name="description_label">Description</string>
+
+    <!-- General Error Messages -->
+    <string name="error_message">Something went wrong. Please try again.</string>
+    <string name="keypass_error">Keypass is missing</string>
+
 </resources>
