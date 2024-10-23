@@ -41,4 +41,5 @@ This is an Android application developed for the **NIT3213 Final Assignment**. T
 To get a copy of the project up and running on your local machine, clone the repository from GitHub:
 
 ```bash
-git clone https://github.com/yourusername/nit3213-finalproject.git
+git clone https://github.com/callumforde2002/NIT3213FinalProjectCallumForde
+
