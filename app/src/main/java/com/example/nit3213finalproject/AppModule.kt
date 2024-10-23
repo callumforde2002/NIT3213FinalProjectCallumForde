@@ -11,12 +11,11 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
     @Provides
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://nit3213-api-h2b3-latest.onrender.com") // Replace with your base API URL
+            .baseUrl("https://nit3213-api-h2b3-latest.onrender.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

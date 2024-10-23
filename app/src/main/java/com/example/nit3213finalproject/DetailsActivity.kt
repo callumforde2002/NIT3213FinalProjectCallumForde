@@ -12,17 +12,24 @@ class DetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        // Get the entity from the intent
         val entity = intent.getSerializableExtra("entity") as? Entity
 
-        // If entity is not null, populate the details
         if (entity != null) {
-            val property1TextView = findViewById<TextView>(R.id.tvProperty1Detail)
-            val property2TextView = findViewById<TextView>(R.id.tvProperty2Detail)
+            val nameTextView = findViewById<TextView>(R.id.tvNameDetail)
+            val cultureTextView = findViewById<TextView>(R.id.tvCultureDetail)
+            val domainTextView = findViewById<TextView>(R.id.tvDomainDetail)
+            val symbolTextView = findViewById<TextView>(R.id.tvSymbolDetail)
+            val parentageTextView = findViewById<TextView>(R.id.tvParentageDetail)
+            val romanEquivalentTextView = findViewById<TextView>(R.id.tvRomanEquivalentDetail)
             val descriptionTextView = findViewById<TextView>(R.id.tvDescriptionDetail)
 
-            property1TextView.text = entity.property1
-            property2TextView.text = entity.property2
+            // Update the TextViews with the entity's data
+            nameTextView.text = entity.name
+            cultureTextView.text = entity.culture
+            domainTextView.text = entity.domain
+            symbolTextView.text = entity.symbol
+            parentageTextView.text = entity.parentage
+            romanEquivalentTextView.text = entity.romanEquivalent
             descriptionTextView.text = entity.description
         }
     }

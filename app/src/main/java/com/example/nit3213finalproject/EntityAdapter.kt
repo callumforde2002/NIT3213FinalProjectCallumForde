@@ -7,19 +7,24 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class EntityAdapter(
-    private val entities: List<Entity>,
+    private var entities: List<Entity>, // Change to var to allow updating the list
     private val onItemClick: (Entity) -> Unit
 ) : RecyclerView.Adapter<EntityAdapter.EntityViewHolder>() {
 
+    // ViewHolder class for the items in the RecyclerView
     inner class EntityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val property1TextView: TextView = itemView.findViewById(R.id.tvProperty1)
-        val property2TextView: TextView = itemView.findViewById(R.id.tvProperty2)
+        private val nameTextView: TextView = itemView.findViewById(R.id.tvName)
+        private val cultureTextView: TextView = itemView.findViewById(R.id.tvCulture)
+        private val domainTextView: TextView = itemView.findViewById(R.id.tvDomain)
 
         fun bind(entity: Entity) {
-            property1TextView.text = entity.property1
-            property2TextView.text = entity.property2
+            nameTextView.text = entity.name
+            cultureTextView.text = entity.culture
+            domainTextView.text = entity.domain
+
+            // Set click listener for each item
             itemView.setOnClickListener {
-                onItemClick(entity) // Trigger click event for the entity
+                onItemClick(entity)
             }
         }
     }
@@ -35,4 +40,10 @@ class EntityAdapter(
     }
 
     override fun getItemCount(): Int = entities.size
+
+    // Method to update the list of entities and refresh the RecyclerView
+    fun updateData(newEntities: List<Entity>) {
+        entities = newEntities
+        notifyDataSetChanged() // Notify the adapter that the dataset has changed
+    }
 }

@@ -2,6 +2,7 @@
     <!-- Primary and Secondary Colors -->
     <color name="primaryColor">#2196F3</color>        <!-- Blue -->
     <color name="primaryDarkColor">#1976D2</color>    <!-- Darker Blue -->
+    <color name="primaryContainerColor">#BBDEFB</color> <!-- Lighter Blue for container -->
     <color name="secondaryColor">#00BCD4</color>      <!-- Teal for accent -->
 
     <!-- Neutral Colors -->
@@ -19,4 +20,7 @@
     <!-- Divider or Border Colors -->
     <color name="dividerColor">#BDBDBD</color>        <!-- Light Gray for dividers -->
 
+    <!-- Updated contrast colors for accessibility -->
+    <color name="highContrastTextPrimary">#000000</color>   <!-- Black for primary text in high contrast -->
+    <color name="highContrastTextSecondary">#424242</color> <!-- Dark gray for secondary text in high contrast -->
 </resources>

@@ -15,12 +15,15 @@
 
     <!-- Details Screen -->
     <string name="details_title">Entity Details</string>
-    <string name="property1_label">Property 1</string>
-    <string name="property2_label">Property 2</string>
+    <string name="name_label">Name</string>
+    <string name="culture_label">Culture</string>
+    <string name="domain_label">Domain</string>
+    <string name="symbol_label">Symbol</string>
+    <string name="parentage_label">Parentage</string>
+    <string name="roman_equivalent_label">Roman Equivalent</string>
     <string name="description_label">Description</string>
 
     <!-- General Error Messages -->
     <string name="error_message">Something went wrong. Please try again.</string>
     <string name="keypass_error">Keypass is missing</string>
-
 </resources>

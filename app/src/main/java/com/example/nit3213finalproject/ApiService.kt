@@ -5,17 +5,16 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
-import java.io.Serializable
 
 // Data class for login request payload
 data class LoginRequest(
-    val username: String,
-    val password: String
+    val username: String,  // YourFirstName
+    val password: String   // Format: sYourStudentID
 )
 
 // Data class for login response payload
 data class LoginResponse(
-    val keypass: String
+    val keypass: String    // Topic name returned upon successful login
 )
 
 // Data class for dashboard response payload
@@ -24,17 +23,10 @@ data class DashboardResponse(
     val entityTotal: Int         // Total number of entities
 )
 
-// Data class for individual entity, made serializable to be passed between activities
-data class Entity(
-    val property1: String,
-    val property2: String,
-    val description: String
-) : Serializable  // This makes the Entity class serializable
-
 // Retrofit interface defining API endpoints
 interface ApiService {
 
-    @POST("/footscray/auth") // Replace with the correct endpoint based on your class location
+    @POST("/footscray/auth") // Replace with "/sydney/auth" or "/ort/auth" based on class location
     fun login(
         @Body request: LoginRequest
     ): Call<LoginResponse>
